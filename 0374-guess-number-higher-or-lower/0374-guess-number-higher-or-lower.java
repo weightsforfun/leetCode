@@ -11,7 +11,7 @@ public class Solution extends GuessGame {
     public int guessNumber(int n) {
         int start=0;
         int end=n;
-        while(start<=end){
+        while(true){
             int middle=start+(end-start)/2;
             int result=guess(middle);
             if(result==0){
@@ -24,6 +24,5 @@ public class Solution extends GuessGame {
                 start=middle+1;
             }
         }
-        return -1;
     }
 }
